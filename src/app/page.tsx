@@ -7,7 +7,7 @@ import io from "socket.io-client";
 const Page = () => {
   const [peers, setPeers] = React.useState<SimplePeer.Instance[]>([]);
   const [stream, setStream] = React.useState<MediaStream | null>(null);
-  const socketRef = useRef<any>();
+  const socketRef = useRef<any>(null);
   const peersRef = useRef<Array<{ peerId: string; peer: SimplePeer.Instance }>>(
     []
   );
